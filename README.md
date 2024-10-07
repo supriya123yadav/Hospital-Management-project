@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+Hospital Management System 
+Project Overview
+The Operation Scheduler For Hospital Management system is designed to assist in scheduling and managing surgeries in a hospital. It enables hospital administrators to efficiently manage operating room (OT) schedules, doctors, patient data, and more, while allowing users (doctors and nurses) to view their schedules and relevant surgical details. This system helps streamline hospital OT operations and ensure smooth scheduling with real-time updates.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Admin Login: Allows admins to manage doctors, patients, and surgery schedules.
+User Login: Provides doctors and nurses access to their schedules and details of upcoming surgeries.
+Manage Surgery Schedules: Admins can add, cancel, or modify surgery schedules, including pre- and post-operative events.
+View Doctor and Patient Details: Users can view doctor profiles and patient details related to the surgery.
+OT Monitoring and Activity Tracking: Admins can track OT usage efficiency, resource allocation, and more.
+Technologies Used
+Frontend:
+React
+HTML5
+CSS3
+JavaScript (ES6)
+Backend:
+Firebase (for initial data storage)
+[React] (replaced Firebase for rendering components dynamically)
+Version Control:
+GitHub (Public repository for version control)
 
-## Available Scripts
+How to Run
+Prerequisites
+Node.js (version 12 or above)
+React (latest version)
+Git
+Setup
+Clone the Repository:
 
-In the project directory, you can run:
+bash
+Copy code
+C:\Users\DELL\Desktop\Hospital Management\hospital-management-system
+cd hospital-management-system
+Install Dependencies:
 
-### `npm start`
+bash
+Copy code
+npm install
+Run the Application:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+The app should now be running on http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Deployment: You can deploy the app using services like Vercel or Netlify.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Functionality
+Login
+Users can log in as either an Admin or a User (Doctor/Nurse).
+Based on the login type, they are redirected to different dashboards.
+Admin Features
+AdminDashboard: Manage doctor profiles, patient information, and surgery schedules.
+PatientSchedule: Create, update, and remove surgery schedules.
+DoctorDetails: View and manage doctor details.
+User Features
+PatientSchedule: View upcoming surgeries and related details.
+DoctorDetails: View assigned doctors for a surgery.
+OTMonitoring: Track daily OT activities and resource usage.
+Component Breakdown
+App.js: Main component handling login and routing based on user type (Admin or User).
+AdminDashboard.js: Contains all the admin-related functionalities, like managing surgery schedules and doctors.
+Login.js: Handles user authentication and login.
+PatientSchedule.js: Displays surgery schedules for both admin and user roles.
+DoctorDetails.js: Shows detailed information about doctors involved in surgeries.
+Design Considerations
+Modular Design: The app is built in a modular fashion with separate components for different functionalities.
+Scalability: Easy to scale by adding more components or pages if needed.
+Security: Simple authentication implemented for distinguishing between admin and user roles.
+Logging: All key actions (e.g., schedule creation, surgery modifications) are logged for auditing purposes.
